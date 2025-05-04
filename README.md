@@ -2,8 +2,8 @@
 Determine the rough frequency response of your cans by repeatedly comparing frequencies and adjusting their volume levels to find the decibel curve.
 
 ## Update log
-### [v0.0.1 pre alpha](https://github.com/creaturekaspar/FReature/tree/dfe93d68ff885794d9e0961183fe348f97c4e0d7)
-* Added tone generator with a logarithmic slider from 20 hz to 20 khz.
-
 ### [v0.0.2 pre alpha](https://github.com/creaturekaspar/FReature/tree/afaf24a0079a5b473adf9a2125b331d50e7b6110)
 * Added logarithmic gain slider.
+
+### [v0.0.1 pre alpha](https://github.com/creaturekaspar/FReature/tree/dfe93d68ff885794d9e0961183fe348f97c4e0d7)
+* Added tone generator with a logarithmic slider from 20 hz to 20 khz.

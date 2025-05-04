@@ -30,7 +30,7 @@ gainSlider.oninput = function ()
    }
    else
    {
-      gainDB = Math.round(20 * Math.log10(gain));
+      gainDB = parseFloat((20 * Math.log10(gain)).toFixed(1));
       gainValue.textContent = gainDB + " dB";
    }
    gainNode.gain.value = gain;

@@ -4,3 +4,6 @@ Determine the rough frequency response of your cans by repeatedly comparing freq
 ## Update log
 ### [v0.0.1 pre alpha](https://github.com/creaturekaspar/FReature/tree/dfe93d68ff885794d9e0961183fe348f97c4e0d7)
 * Added tone generator with a logarithmic slider from 20 hz to 20 khz.
+
+### v0.0.2 pre alpha
+* Added logarithmic gain slider.

@@ -1,19 +1,39 @@
 const freqSlider = document.getElementById("freqSlider");
 const freqValue = document.getElementById("freqValue");
+const gainSlider = document.getElementById("gainSlider");
+const gainValue = document.getElementById("gainValue");
 const button = document.getElementById("button");
 freqSlider.value = 0;
+gainSlider.value = 1;
 
-let frequency = 20;
+let freq = 20;
+let gain = 1;
+let gainDB = 0;
 let playing = false;
 
 freqSlider.oninput = function ()
 {
-   frequency = Math.round(Math.pow(10, Math.log10(20) + (this.value * (Math.log10(20000) - Math.log10(20)))));
-   freqValue.textContent = frequency;
+   freq = Math.round(Math.pow(10, Math.log10(20) + (this.value * (Math.log10(20000) - Math.log10(20)))));
+   freqValue.textContent = freq;
    if (playing)
    {
-      tone.frequency.setValueAtTime(frequency, audio.currentTime);
+      tone.frequency.setValueAtTime(freq, audioCtx.currentTime);
    }
+};
+
+gainSlider.oninput = function ()
+{
+   gain = this.value;
+   if (gain == 0)
+   {
+      gainValue.textContent = "-∞ dB"
+   }
+   else
+   {
+      gainDB = Math.round(20 * Math.log10(gain));
+      gainValue.textContent = gainDB + " dB";
+   }
+   gainNode.gain.value = gain;
 };
 
 button.onclick = function ()

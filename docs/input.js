@@ -4,20 +4,13 @@ const button = document.getElementById("button");
 freqSlider.value = 0;
 
 let frequency = 20;
-let play = true;
+let playing = false;
 
 freqSlider.oninput = function ()
 {
-   if (this.value == 120)
-   {
-      frequency = 20000;
-   }
-   else
-   {
-      frequency = Math.round(20 * Math.pow(2, this.value / 12));
-   }
+   frequency = Math.round(Math.pow(10, Math.log10(20) + (this.value * (Math.log10(20000) - Math.log10(20)))));
    freqValue.textContent = frequency;
-   if (!play)
+   if (playing)
    {
       tone.frequency.setValueAtTime(frequency, audio.currentTime);
    }
@@ -25,7 +18,7 @@ freqSlider.oninput = function ()
 
 button.onclick = function ()
 {
-   if (play)
+   if (!playing)
    {
       playTone();
       this.textContent = "stop";
@@ -35,5 +28,5 @@ button.onclick = function ()
       stopTone();
       this.textContent = "play";
    }
-   play = !play
+   playing = !playing
 };

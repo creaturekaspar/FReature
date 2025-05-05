@@ -2,6 +2,9 @@
 Determine the rough frequency response of your cans by repeatedly comparing frequencies and adjusting their volume levels to find the decibel curve.
 
 ## Update log
+### v0.0.3 pre alpha
+* Added frequency response graph and some style.
+
 ### [v0.0.2 pre alpha](https://github.com/creaturekaspar/FReature/tree/6a338bb582fa51c5d19439cf3f8651ae9f2263d2)
 * Added logarithmic gain slider.
 

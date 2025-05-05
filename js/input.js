@@ -6,10 +6,10 @@ const button = document.getElementById("button");
 freqSlider.value = 0;
 gainSlider.value = 1;
 
-let freq = 20;
-let gain = 1;
-let gainDB = 0;
-let playing = false;
+var freq = 20;
+var gain = 1;
+var gainDb = 0;
+var playing = false;
 
 freqSlider.oninput = function ()
 {
@@ -30,8 +30,8 @@ gainSlider.oninput = function ()
    }
    else
    {
-      gainDB = parseFloat((20 * Math.log10(gain)).toFixed(1));
-      gainValue.textContent = gainDB + " dB";
+      gainDb = parseFloat((20 * Math.log10(gain)).toFixed(1));
+      gainValue.textContent = gainDb + " dB";
    }
    gainNode.gain.value = gain;
 };

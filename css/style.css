@@ -1,0 +1,14 @@
+body {
+   background-color: #272e33;
+   color: #d3c6aa;
+   display: grid;
+   place-items: center;
+}
+
+#graphWrapper {
+   background-color: #2e383c;
+   display: inline-block;
+   padding: 10px;
+   padding-top: 34px;
+   padding-right: 22px;
+}

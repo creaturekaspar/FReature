@@ -4,8 +4,13 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>FReature</title>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <div id="graphWrapper">
+      <canvas id="graph" width="1000" height="600"></canvas>
+   </div>
    <div>
       <label for="freqSlider">frequency:</label>
       <input id="freqSlider" type="range" min="0" max="1" step="0.0001">
@@ -19,7 +24,8 @@
    <div>
       <button id="button">play</button>
    </div>
-   <script src="input.js"></script>
-   <script src="tone.js"></script>
+   <script src="js/graph.js"></script>   
+   <script src="js/input.js"></script>
+   <script src="js/tone.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 const canvasCtx = document.getElementById("graph").getContext("2d");
 var dataPoints = [];
 
-fetch("/FReature/assets/test_curve.txt")
+fetch("/FReature/assets/test.txt")
 .then(response => response.text())
 .then(text =>
 {
